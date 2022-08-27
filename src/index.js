@@ -1,13 +1,24 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
+import{ BrowserRouter } from "react-router-dom";
 
 import "antd/dist/antd.min.css";
 
-ReactDom.render(
+// ReactDom.render
 
-    // Wrapping the app with router for the Links to work
-        <App/>
+//     // Wrapping the app with router for the Links to work
+   
 
-, document.getElementById("root"));
+// , document.getElementById("root"));
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render( 
+        <React.StrictMode >
+        
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </React.StrictMode>
+    );
 

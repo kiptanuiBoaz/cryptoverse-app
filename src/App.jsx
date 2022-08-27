@@ -1,13 +1,13 @@
 import React from "react";
 import  "./App.css";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import {Layout } from "antd";
 import {Navbar, Exchanges, News, Homepage, CryptoCurrencies,CryptoDetails} from "./components";
 
 function App() {
-  return (<>
-  <h1>Trying out</h1>
-  <Router basename="/">
+  return (
+  
+ 
       <div className="app">
 
         <div className="navbar">
@@ -18,8 +18,8 @@ function App() {
           <Layout>
             <div className="routes">
               <Routes>
-                <Route  path="/" element={Homepage } />
-                <Route exact path="/exhanges"  element={Exchanges}/>
+                <Route  path="/" element={<Homepage/> } />
+                <Route exact path="/exhanges"  element={<Exchanges/>}/>
                 <Route exact path="/cryptocurrencies" element = {<CryptoCurrencies />}/>
                 <Route exact path="/crypto:coinId" element = {<CryptoDetails />}/>
                 <Route exact path="/news" element ={<News />}/>
@@ -33,8 +33,7 @@ function App() {
 
         </div>
       </div>
-  </Router>
-  </>
+
 
   );
 }
