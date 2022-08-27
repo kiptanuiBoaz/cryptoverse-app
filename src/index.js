@@ -19,6 +19,7 @@ import "antd/dist/antd.min.css";
             <BrowserRouter>
                 <App/>
             </BrowserRouter>
+            
         </React.StrictMode>
     );
 
