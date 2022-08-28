@@ -1,8 +1,9 @@
 import React from "react";
 import {Menu, Typography ,Avatar} from "antd";
 import {NavLink as Link} from "react-router-dom";
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined} from "@ant-design/icons";
+import { HomeOutlined, MoneyCollectOutlined, BulbOutlined,FundOutlined} from "@ant-design/icons";
 import icon from "../images/cryptocurrency.png";
+
 
 
 const Navbar = () => {
@@ -19,25 +20,25 @@ const Navbar = () => {
 
       <Menu theme="dark" >
 
-        <Menu.Title icon= {<HomeOutlined/>}>
+        <Menu.Item icon= {<HomeOutlined/>}>
           <Link to="/">Home</Link>
-        </Menu.Title>
+        </Menu.Item>
     
-        <Menu.Title icon= {<FundOutlined/>}>
+        <Menu.Item icon= {<FundOutlined/>}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Title>
+        </Menu.Item>
 
-        <Menu.Title icon= {<MoneyCollectOutlined/>}>
+        <Menu.Item icon= {<MoneyCollectOutlined/>}>
           <Link to="/exchanges">Exchanges</Link>
-        </Menu.Title>
+        </Menu.Item>
 
-        <Menu.Title  icon= {<BulbOutlined/>}>
+        <Menu.Item  icon= {<BulbOutlined/>}>
           <Link to="/news">News</Link>
-        </Menu.Title>
+        </Menu.Item>
 
-        {/* <Button className="menu-control-container">
+         {/* <Button className="menu-control-container">
         < MenuOutlined/
-        </Button> */}
+        </Button>  */}
 
       </Menu>
     </div>
