@@ -1,24 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import{ BrowserRouter } from "react-router-dom";
-
+import{ BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./app/store"
 import "antd/dist/antd.min.css";
 
-// ReactDom.render
 
-//     // Wrapping the app with router for the Links to work
-   
-
-// , document.getElementById("root"));
+// Wrapping the app with router to expose the links to router
 
     const root = ReactDOM.createRoot(document.getElementById("root"));
     root.render( 
         <React.StrictMode >
         
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
+            <Router>
+
+                <Provider store={store}>
+
+                    <App/>
+                    
+                </Provider>
+                
+                
+            </Router>
             
         </React.StrictMode>
     );

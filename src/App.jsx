@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import  "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import {Layout ,Space,Typography} from "antd";
 import {Navbar, Exchanges, News, Homepage, CryptoCurrencies,CryptoDetails} from "./components";
 
-function App() {
+// destructuring the title from Typography exported as namde Component from antd styling library
+const {Title} = Typography;
+
+export default function App() {
   return (
   
  
@@ -28,10 +31,10 @@ function App() {
           </Layout>
 
           <div className="footer" >
-            <Typography.Title level={5} style={{color:"#fff", textAlign:"center"}}>
+            <Title level={5} style={{color:"#fff", textAlign:"center"}}>
               Cryptovetse <br/>
               All rights reserved
-            </Typography.Title>
+            </Title>
 
             <Space>
               <Link to ="home" >Home</Link>
@@ -49,4 +52,3 @@ function App() {
   );
 }
 
-export default App
