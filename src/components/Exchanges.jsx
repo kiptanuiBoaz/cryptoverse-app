@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Exchanges = () => {
+export const Exchanges = () => {
   return (
     <div>Exchanges</div>
   )
 }
-
-export default Exchanges

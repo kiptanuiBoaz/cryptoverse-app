@@ -2,15 +2,15 @@ import React from "react";
 import {Menu, Typography ,Avatar} from "antd";
 import {NavLink as Link} from "react-router-dom";
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined,FundOutlined} from "@ant-design/icons";
-import icon from "../images/cryptocurrency.png";
+import icon from "../images/logo.png";
 
 
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon}  size="small" alt= "avatar" />
+        <Avatar src={icon}  size={70} alt= "avatar" />
 
         <Typography.Title level={2} className="logo">
           <Link to="/"> Cyrptoverse </Link>
@@ -45,4 +45,3 @@ const Navbar = () => {
   )
 }
 
-export default Navbar

@@ -1,7 +1,7 @@
 import React from "react";
 import  "./App.css";
-import { Routes, Route } from "react-router-dom";
-import {Layout } from "antd";
+import { Routes, Route, Link } from "react-router-dom";
+import {Layout ,Space,Typography} from "antd";
 import {Navbar, Exchanges, News, Homepage, CryptoCurrencies,CryptoDetails} from "./components";
 
 function App() {
@@ -21,18 +21,29 @@ function App() {
                 <Route  path="/" element={<Homepage/> } />
                 <Route exact path="/exhanges"  element={<Exchanges/>}/>
                 <Route exact path="/cryptocurrencies" element = {<CryptoCurrencies />}/>
-                <Route exact path="/crypto:coinId" element = {<CryptoDetails />}/>
+                <Route exact path="/crypto/:coinId" element = {<CryptoDetails />}/>
                 <Route exact path="/news" element ={<News />}/>
               </Routes>
             </div>
           </Layout>
 
-        </div>
+          <div className="footer" >
+            <Typography.Title level={5} style={{color:"#fff", textAlign:"center"}}>
+              Cryptovetse <br/>
+              All rights reserved
+            </Typography.Title>
 
-        <div className="footer">
+            <Space>
+              <Link to ="home" >Home</Link>
+              <Link to ="exchanges">Exchanges</Link>
+              <Link to = "news">News</Link>
+            </Space>
+
+          </div>
 
         </div>
-      </div>
+      
+      </div> 
 
 
   );
