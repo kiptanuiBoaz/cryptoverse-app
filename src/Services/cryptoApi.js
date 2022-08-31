@@ -1,11 +1,13 @@
+// createApi  The primary source of RTK Query functionality. 
 import { createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 const cryptoApiHeaders = {
-    'X-RapidAPI-Key': '5114c5f3f4msh14ca9cacb15ee82p1773bejsn5bb1a8982d24',
+    
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
 }
 
-const baseUrl = 'https://coinranking1.p.rapidapi.com/coins';
+const baseUrl = 'https://coinranking1.p.rapidapi.com';
 
 const createRequest = (url) => ({url, headers:cryptoApiHeaders})
 
@@ -13,6 +15,7 @@ const createRequest = (url) => ({url, headers:cryptoApiHeaders})
 export const cryptoApi = createApi({
 
     reducerPath:"cryptoApi",
+    // fetchBaseQuery provides a lightweight wrapper around fetch queries, which helps simplify requests.
     baseQuery:fetchBaseQuery({baseUrl}),
 
     endpoints: (builder)=>({
