@@ -11,6 +11,19 @@ export const CryptoCurrencies = () => {
     console.log(cryptos);
 
   return (
-    <div>CrytoCurrencies</div>
+    <>
+      <Row gutters={[32,32]} className="crypto-card-container">
+        {cryptos.map((currency)=>
+          (
+            <Col xs={24} sm={12} lg={6} className ="crypto-card" key= {currency.id}>
+              <Link to={`/crypto/${currency.id}`}>
+
+              </Link>
+
+            </Col>
+          )
+        )}
+      </Row>
+    </>
   )
 }
