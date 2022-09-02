@@ -10,7 +10,7 @@ const {Title} = Typography;
 
 export const Homepage = () => {
 
-  const {data, isFetching} =useGetCryptosQuery();
+  const {data, isFetching} =useGetCryptosQuery(10);
 
   const globalStats = data?.data?.stats;
 
@@ -33,7 +33,7 @@ export const Homepage = () => {
 
       </div>
 
-      <CryptoCurrencies/>
+      <CryptoCurrencies simplified={true}/>
 
       
       <div className="home-heading-container">
