@@ -33,7 +33,7 @@ export const Homepage = () => {
 
       </div>
 
-      <CryptoCurrencies simplified={true}/>
+      <CryptoCurrencies simplified />
 
       
       <div className="home-heading-container">
