@@ -10,7 +10,7 @@ const {Title} = Typography;
 
 export const Homepage = () => {
 
-  const {data, isFetching} =useGetCryptosQuery(10);
+  const {data, isFetching} = useGetCryptosQuery(10);
 
   const globalStats = data?.data?.stats;
 
