@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Typography, Row, Col, Avatar, Select } from "antd";
 import moment from "moment";
-import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
+import { useGetCryptosNewsQuery } from "../services/cryptoNewsApi";
 
 const {Text, Title} =Typography;
 const {Option} = Select;
 
 export const News = ({ simplified }) => {
-  const {data: cryptoNews} = useGetCryptoNewsQuery({newsCategory:"Cryptocurrency", count: simplified ? 6: 12})
+  const {data: cryptoNews} = useGetCryptosNewsQuery({newsCategory:"Cryptocurrency", count: simplified ? 6: 12})
 
   if(!cryptoNews?.value) return "Loading...";
 
