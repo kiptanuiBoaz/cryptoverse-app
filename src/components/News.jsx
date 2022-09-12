@@ -13,7 +13,7 @@ export const News = ({ simplified }) => {
   const {data: cryptoNews} = useGetCryptosNewsQuery({newsCategory, count: simplified ? 6: 12})
 
   if(!cryptoNews?.value) return "Loading...";
-
+  // ?>>optional chaininh
   return (
     <Row gutter={[24,24]}>
       {cryptoNews?.value.map(
