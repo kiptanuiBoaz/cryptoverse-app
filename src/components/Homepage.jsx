@@ -3,8 +3,8 @@ import millify from "millify";
 import {Typography, Row, Col, Statistic} from "antd";
 import {Link} from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
-import {CryptoCurrencies, News } from "../components";
-// import { retry } from "@reduxjs/toolkit/dist/query";
+import {CryptoCurrencies} from "../components";
+// import { retry } from "@reduxjs/toolkit/dist/query"; News
 
 const {Title} = Typography;
 
@@ -43,7 +43,7 @@ export const Homepage = () => {
 
       </div>
 
-      <News simplified />
+      {/* <News simplified /> */}
     </>
   )
 }
