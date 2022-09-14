@@ -3,8 +3,8 @@ import millify from "millify";
 import {Typography, Row, Col, Statistic} from "antd";
 import {Link} from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
-import {CryptoCurrencies} from "../components";
-// import { retry } from "@reduxjs/toolkit/dist/query"; News
+import {CryptoCurrencies ,News} from "../components";
+// import { retry } from "@reduxjs/toolkit/dist/query"; 
 
 const {Title} = Typography;
 
@@ -14,7 +14,9 @@ export const Homepage = () => {
 
   const globalStats = data?.data?.stats;
 
-  if (isFetching)  return("Loading...");
+  console.log(data);
+
+  // if (!isFetching)  return("Loading...");
 
   return (
     <>
@@ -43,7 +45,7 @@ export const Homepage = () => {
 
       </div>
 
-      {/* <News simplified /> */}
+      <News simplified />
     </>
   )
 }
