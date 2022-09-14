@@ -16,7 +16,7 @@ export const Homepage = () => {
 
   console.log(data);
 
-  // if (!isFetching)  return("Loading...");
+  if (!isFetching)  return("Loading...");
 
   return (
     <>
